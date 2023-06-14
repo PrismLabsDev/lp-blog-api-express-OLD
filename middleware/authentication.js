@@ -31,6 +31,13 @@ const auth = async (req, res, next) => {
 
   const user = await User.findById(decoded.user);
 
+  if(!user.verified){
+    return res.json({
+			message: 'You are not verified.',
+		})
+		.status(401);
+  }
+
   req.userId = decoded.user;
   req.user = user;
 
