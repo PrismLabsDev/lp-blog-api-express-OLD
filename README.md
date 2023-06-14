@@ -9,6 +9,10 @@ This project also relies on the docker environment included in the [PrismLabsDev
 ``` bash
 npm install
 cp .env.example .env
+
+# Generate app key for auth, enter this in your terminal running node and add to env AUTH_TOKEN
+require('crypto').randomBytes(16).toString('hex')
+
 npm run dev
 ```
 
