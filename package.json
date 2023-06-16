@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
+    "seed": "node ./seeders/index.js",
     "dev": "nodemon index.js",
     "test": "jest"
   },
@@ -12,6 +13,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@faker-js/faker": "^8.0.2",
     "address": "^1.2.2",
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.20.2",
